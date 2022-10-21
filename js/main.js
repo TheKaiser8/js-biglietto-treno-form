@@ -10,24 +10,27 @@
 //     location.reload();
 // }
 // 3. Il prezzo del biglietto è definito in base al km (0.21 €/km)
-let ageRange = document.getElementById('age-range').value;
-let km = document.getElementById('km');
-let price = km * 0.21;
-let message = "Prezzo biglietto intero";
-console.log(price, "€");
 // 4. Determina il prezzo del biglietto finale
 //    5a. SE il passeggero è minorenne va applicato uno sconto del 20%
 //        ALTRIMENTI SE il passeggero ha un'età maggiore o uguale a 65 anni va applicato uno sconto del 40%
 //        ALTRIMENTI il prezzo del biglietto sarà intero senza sconto
+const btnGenerator = document.getElementById('btn-generator');
 
-if( ageRange === "minor") {
-    price -= price * 0.2;
-    message = "Prezzo tariffa minorenni";
-} else if ( ageRange === "over65" ) {
-    price -= price * 0.4;
-    message = "Prezzo tariffa over 65";
-} 
-console.log(`${price.toFixed(2)}€`);
-console.log(message);
+btnGenerator.addEventListener('click', function() {
+    const ageRange = document.getElementById('age-range').value;
+    const km = document.getElementById('km').value;
+    let price = km * 0.21;
+    let message = "Prezzo biglietto intero";
+    console.log(price, "€");
+    if( ageRange === "minor") {
+        price -= price * 0.2;
+        message = "Prezzo tariffa minorenni";
+    } else if ( ageRange === "over65" ) {
+        price -= price * 0.4;
+        message = "Prezzo tariffa over 65";
+    } 
+    console.log(`${price.toFixed(2)}€`);
+    console.log(message);
+    document.querySelector("h2").innerHTML = price.toFixed(2) + "€";
+});
 // 6. Stampa sulla pagina HTML il prezzo del biglietto del treno
-document.querySelector("h1").innerHTML = price.toFixed(2) + "€";
