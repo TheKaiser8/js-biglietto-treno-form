@@ -5,28 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form calcolo prezzo del biglietto del treno</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Calcola il prezzo del tuo biglietto</h1>
-    <form action="">
-        <label for="first-name">Nome</label>
-        <input type="text" id="first-name" name="first-name">
-        <label for="last-name">Cognome</label>
-        <input type="text" id="last-name" name="last-name">
-        <label for="km">Km da percorrere</label>
-        <input type="number" id="km" name="km" min="1">
-        <label for="age-range">Fascia d'età</label>
-        <select name="age-range" id="age-range">
-            <option value="minor">Minorenne</option>
-            <option value="adult">Maggiorenne</option>
-            <option value="over65">Over 65</option>
-        </select>
-        <div class="actions">
-            <button type="button" id="btn-generator">Genera</button>
-            <button type="reset">Annulla</button>
-        </div>
-    </form>
-    <h2></h2>
+    <div class="page-container">
+        <section class="ticket-calculation text-center">
+            <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+            <form action="">
+            <label for="passenger-data">Nome Cognome</label>
+            <input type="text" id="passenger-data" name="passenger-data" placeholder="Nome Cognome" value="Jon Snow">
+            <label for="km">Km da percorrere</label>
+            <input type="number" id="km" name="km" min="1">
+            <label for="age-range">Fascia d'età</label>
+            <select name="age-range" id="age-range">
+                <option value="minor">Minorenne</option>
+                <option value="adult">Maggiorenne</option>
+                <option value="over65">Over 65</option>
+            </select>
+            <div class="actions">
+                <button type="button" id="btn-generator">Genera</button>
+                <button type="reset">Annulla</button>
+            </div>
+            </form>
+        </section>
+        <section class="your-ticket">
+            <h2 class="text-center">IL TUO BIGLIETTO</h2>
+            <div class="row justify-content-between">
+                <div class="col-auto">
+                    <h3>DETTAGLIO PASSEGGERI</h3>
+                    <h4>NOME PASSEGGERO</h4>
+                    <Strong id="passenger-name"></Strong>
+                </div>
+                <div class="col-auto">
+                    <h5>Offerta</h5>
+                    <span id="ticket-type"></span>
+                </div>
+                <div class="col-auto">
+                    <h5>Carrozza</h5>
+                    <span id="railway-wagon"></span>
+                </div>
+                <div class="col-auto">
+                    <h5>Codice CP</h5>
+                    <span id="code-cp"></span>
+                </div>
+                <div class="col-auto">
+                    <h5>Costo biglietto</h5>
+                    <span id="ticket-price"></span>
+                </div>
+            </div>
+            
+        </section>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+/*----------------
+    RESET
+-----------------*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/*----------------
+    TYPOGRAPHY
+-----------------*/
+h4 {
+    font-size: 1.125rem;
+}
+h5 {
+    font-size: 1rem;
+}
+/*----------------
+    COMMON
+-----------------*/
+.page-container {
+    max-width: 62.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin: 0 auto;
+}
+.text-center {
+    text-align: center;
+}
+.row {
+    display: flex;
+}
+.col-auto {
+    width: auto;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
