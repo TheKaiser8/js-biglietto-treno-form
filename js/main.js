@@ -8,6 +8,9 @@
 //        ALTRIMENTI il prezzo del biglietto sarà intero senza sconto
 
 const btnGenerator = document.getElementById('btn-generator');
+const yourTicket = document.querySelector('.your-ticket');
+const btnReset = document.getElementById('btn-reset');
+
 btnGenerator.addEventListener('click', function() {
     const passengerData = document.getElementById('passenger-data').value;
     const ageRange = document.getElementById('age-range').value;
@@ -35,4 +38,9 @@ btnGenerator.addEventListener('click', function() {
     document.getElementById('railway-wagon').innerHTML = railwayWagon;
     document.getElementById('code-cp').innerHTML = codeCp;
     document.getElementById('ticket-price').innerHTML = price.toFixed(2) + "€";
+    yourTicket.classList.add('d-block');
 });
+
+btnReset.addEventListener('click', function() {
+    yourTicket.classList.remove('d-block');
+})

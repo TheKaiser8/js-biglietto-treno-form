@@ -36,3 +36,12 @@ h5 {
 .justify-content-between {
     justify-content: space-between;
 }
+/*-----------------------
+    SECTION YOUR TICKET
+------------------------*/
+.d-none {
+    display: none;
+}
+.d-block {
+    display: block;
+}

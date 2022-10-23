@@ -19,16 +19,16 @@
             <label for="age-range">Fascia d'età</label>
             <select name="age-range" id="age-range">
                 <option value="minor">Minorenne</option>
-                <option value="adult">Maggiorenne</option>
+                <option value="adult" selected>Maggiorenne</option>
                 <option value="over65">Over 65</option>
             </select>
             <div class="actions">
                 <button type="button" id="btn-generator">Genera</button>
-                <button type="reset">Annulla</button>
+                <button type="reset" id="btn-reset">Annulla</button>
             </div>
             </form>
         </section>
-        <section class="your-ticket">
+        <section class="your-ticket d-none">
             <h2 class="text-center">IL TUO BIGLIETTO</h2>
             <div class="row justify-content-between">
                 <div class="col-auto">
